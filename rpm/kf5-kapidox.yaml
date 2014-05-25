@@ -1,0 +1,52 @@
+Name         : kf5-kapidox
+Version      : 4.99.0
+Release      : 1
+Group        : System/Base
+License      : GPLv2+
+Summary      : KDE Frameworks 5 Tier 4 module for API documentation generation
+Description  : |
+  KDE Frameworks 5 Tier 4 module for API documentation generation.
+URL          : http://www.kde.org
+SetupOptions : -q -n %{name}-%{version}/upstream
+
+Sources:
+    - "%{name}-%{version}.tar.xz"
+
+RpmLintIgnore:
+    - devel-file-in-non-devel-package
+    - no-changelogname-tag
+    - library-without-ldconfig-postin
+    - library-without-ldconfig-postun
+
+Configure    : none
+Builder      : none
+
+PkgBR:
+    - kf5-rpm-macros
+    - extra-cmake-modules
+PkgConfigBR:
+    - Qt5Core
+    - Qt5DBus
+    - Qt5Xml
+    - Qt5Network
+    - Qt5Gui
+    - Qt5Widgets
+    - Qt5Concurrent
+    - Qt5Test
+    - python-2.7
+Requires:
+    - kf5-filesystem
+
+RequiresPost:
+    - /sbin/ldconfig
+RequiresPostUn:
+    - /sbin/ldconfig
+
+Files:
+    - "%{_kf5_prefix}/lib/python2.7/site-packages/kapidox"
+    - "%{_kf5_prefix}/lib/python2.7/site-packages/kapidox-5.0.0-py2.7.egg-info"
+    - "%{_kf5_bindir}/kgenapidox"
+    - "%{_kf5_bindir}/depdiagram-prepare"
+    - "%{_kf5_bindir}/depdiagram-generate"
+    - "%{_kf5_bindir}/kgenframeworksapidox"
+    - "%{_kf5_bindir}/depdiagram-generate-all"
