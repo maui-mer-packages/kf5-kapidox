@@ -8,8 +8,14 @@ Name:       kapidox
 # >> macros
 # << macros
 
+# >> bcond_with
+# << bcond_with
+
+# >> bcond_without
+# << bcond_without
+
 Summary:    KDE Frameworks 5 Tier 4 module for API documentation generation
-Version:    5.1.0
+Version:    5.2.0
 Release:    1
 Group:      System/Base
 License:    GPLv2+
