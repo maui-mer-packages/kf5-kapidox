@@ -34,7 +34,7 @@ BuildRequires:  pkgconfig(Qt5Gui)
 BuildRequires:  pkgconfig(Qt5Widgets)
 BuildRequires:  pkgconfig(Qt5Concurrent)
 BuildRequires:  pkgconfig(Qt5Test)
-BuildRequires:  pkgconfig(python-2.7)
+BuildRequires:  pkgconfig(python3)
 BuildRequires:  kf5-rpm-macros
 BuildRequires:  extra-cmake-modules
 
@@ -69,8 +69,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%{_kf5_prefix}/lib/python2.7/site-packages/kapidox
-%{_kf5_prefix}/lib/python2.7/site-packages/kapidox-5.0.0-py2.7.egg-info
+%{_kf5_prefix}/lib/python3*/site-packages/kapidox*
 %{_kf5_bindir}/kgenapidox
 %{_kf5_bindir}/depdiagram-prepare
 %{_kf5_bindir}/depdiagram-generate

@@ -33,7 +33,7 @@ PkgConfigBR:
     - Qt5Widgets
     - Qt5Concurrent
     - Qt5Test
-    - python-2.7
+    - python3
 Requires:
     - kf5-filesystem
 
@@ -43,8 +43,7 @@ RequiresPostUn:
     - /sbin/ldconfig
 
 Files:
-    - "%{_kf5_prefix}/lib/python2.7/site-packages/kapidox"
-    - "%{_kf5_prefix}/lib/python2.7/site-packages/kapidox-5.0.0-py2.7.egg-info"
+    - "%{_kf5_prefix}/lib/python3*/site-packages/kapidox*"
     - "%{_kf5_bindir}/kgenapidox"
     - "%{_kf5_bindir}/depdiagram-prepare"
     - "%{_kf5_bindir}/depdiagram-generate"
