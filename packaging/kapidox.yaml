@@ -7,7 +7,6 @@ Summary      : KDE Frameworks 5 Tier 4 module for API documentation generation
 Description  : |
   KDE Frameworks 5 Tier 4 module for API documentation generation.
 URL          : http://www.kde.org
-SetupOptions : -q -n %{name}-%{version}/upstream
 
 Sources:
     - "%{name}-%{version}.tar.xz"
